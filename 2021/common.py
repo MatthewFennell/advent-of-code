@@ -1,3 +1,5 @@
+import re
+
 def getLinesAsNumbers(filename):
     lines = []
     with open(filename) as file:
@@ -40,5 +42,13 @@ def getBingoBoards(filename):
             else:                
                 currentBoard.append(list(map(int, line.rstrip().split())))
         lines.append(currentBoard)
+    return lines
+
+def getLineSplitOnManyChars(filename, charsToSplitOn):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            res = re.split(charsToSplitOn, line)    
+            lines.append(list(map(int,res)))
     return lines
     
