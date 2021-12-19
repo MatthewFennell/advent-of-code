@@ -51,4 +51,16 @@ def getLineSplitOnManyChars(filename, charsToSplitOn):
             res = re.split(charsToSplitOn, line)    
             lines.append(list(map(int,res)))
     return lines
+
+
+def getLinesAsArrayWithSplit(filename):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            res = line.split(' | ')
+            partOne = res[0].split(" ")
+            partTwo = res[1].split(" ")
+            lines.append([partOne, partTwo])
+            
+    return lines
     
