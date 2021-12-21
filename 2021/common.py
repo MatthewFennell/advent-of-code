@@ -31,6 +31,17 @@ def getLineAsNumbers(filename):
                 lines.append(int(y))         
     return lines
 
+def getLinesAsNumberArrays(filename):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            myLine = []
+            x = line.split(',')
+            for y in x:
+                myLine.append(int(y))   
+            lines.append(myLine)      
+    return lines
+
 def getBingoBoards(filename):
     lines = []
     currentBoard = []
@@ -52,6 +63,14 @@ def getLineSplitOnManyChars(filename, charsToSplitOn):
             lines.append(list(map(int,res)))
     return lines
 
+
+def getLinesSplitOnChar(filename, charSplit):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            res = line.split(charSplit) 
+            lines.append(res)   
+    return lines
 
 def getLinesAsArrayWithSplit(filename):
     lines = []
