@@ -1,9 +1,9 @@
-from common import getLinesAsNumberArrays, getLinesSplitOnChar
+from common import get_lines_as_number_arrays, get_line_split_on_char
 import numpy
 
-def partOne():
-    lines = getLinesAsNumberArrays('13_input.txt')
-    folds = getLinesSplitOnChar('13_folds.txt', 'fold along ')
+def part_one():
+    lines = get_lines_as_number_arrays('13_input.txt')
+    folds = get_line_split_on_char('13_folds.txt', 'fold along ')
     temp=[]
     order=[]
     for x in folds:
@@ -74,7 +74,7 @@ def partOne():
     print("Part One:", numDots)
     for x in result:
         print (x)
-partOne()
+part_one()
 
 #, , ,#, , , ,#,#, ,#,#,#, , ,#, , ,#, ,#,#,#,#, ,#, , ,#, ,#,#,#, , , ,#,#, , 
 #, ,#, , , , , ,#, ,#, , ,#, ,#, ,#, , ,#, , , , ,#, , ,#, ,#, , ,#, ,#, , ,#, 

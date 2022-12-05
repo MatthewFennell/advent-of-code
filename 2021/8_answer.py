@@ -1,4 +1,4 @@
-from common import getLinesAsArrayWithSplit
+from common import get_lines_as_array_with_split
 
 # array = [
 #     [[...one]],  [...two]]
@@ -29,8 +29,8 @@ testInput = [[['acedgfb','cdfbe','gcdfa','fbcad','dab','cefabd','cdfgeb','eafb',
 
 # print(testInput)
 
-def partOne():
-    lines = getLinesAsArrayWithSplit('8_input.txt')
+def part_one():
+    lines = get_lines_as_array_with_split('8_input.txt')
     # print(lines)
     count = 0
     for x in lines:
@@ -128,8 +128,8 @@ def findMyLetter(digit, chars):
         if (allEqual):
             return x['letter']
 
-def partTwo():
-    lines = getLinesAsArrayWithSplit('8_input.txt')
+def part_two():
+    lines = get_lines_as_array_with_split('8_input.txt')
     testCount = 0
     totalTotalSum = 0
     for x in lines:
@@ -236,5 +236,5 @@ def partTwo():
 
     
 
-partOne()
-partTwo()
+part_one()
+part_two()

@@ -1,8 +1,8 @@
 import numpy
-from common import getLineSplitOnManyChars
+from common import get_line_split_on_many_chars
 
-def partOne():
-    lines = getLineSplitOnManyChars('5_input.txt', ' -> |,')
+def part_one():
+    lines = get_line_split_on_many_chars('5_input.txt', ' -> |,')
     # lines = [
     #     [0,9,5,9],
     #     [8,0,0,8],
@@ -44,8 +44,8 @@ def partOne():
                 numberOfOverlaps +=1
     print("Part One:", numberOfOverlaps)
 
-def partTwo():
-    lines = getLineSplitOnManyChars('5_input.txt', ' -> |,')
+def part_two():
+    lines = get_line_split_on_many_chars('5_input.txt', ' -> |,')
     # lines = [
     #     [0,9,5,9],
     #     [8,0,0,8],
@@ -101,6 +101,6 @@ def partTwo():
     print("Part Two:", numberOfOverlaps)
 
     
-partOne()
+part_one()
 
-partTwo()
+part_two()

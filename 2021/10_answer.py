@@ -1,4 +1,4 @@
-from common import getLines
+from common import get_lines
 
 def isMatchingBracket(cur, stack):
     if (len(stack) == 0):
@@ -27,7 +27,7 @@ def getMatching(b):
 def isOpeningBracket(b):
     return b == "(" or b == "{" or b == "[" or b == "<"
 
-def partOne():
+def part_one():
     scoreMappings = {
         ')': 3,
         ']': 57,
@@ -41,7 +41,7 @@ def partOne():
         '>': 4
     }
     
-    lines = getLines('10_input.txt')
+    lines = get_lines('10_input.txt')
     # lines=['[({(<(())[]>[[{[]{<()<>>']
     incorrectBrackets = []
     totalScore = 0
@@ -76,4 +76,4 @@ def partOne():
     print("Part One:", totalScore)
     print("Part Two:", middle)
 
-partOne()
+part_one()

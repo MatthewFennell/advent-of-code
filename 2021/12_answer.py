@@ -1,4 +1,4 @@
-from common import getLinesSplitOnChar
+from common import get_line_split_on_char
 
 def flatten(t):
     return [item for sublist in t for item in sublist]
@@ -29,9 +29,9 @@ def findRoutes(start, currentRoute, options, visited):
             paths.append(findRoutes(x, [*currentRoute, x], options, {**visited, x: True}))
     return flatten(paths)
 
-def partOne():
+def part_one():
     options = {}
-    lines = getLinesSplitOnChar('12_input.txt', '-')
+    lines = get_line_split_on_char('12_input.txt', '-')
 
     for x in range(0, len(lines)):
         start = lines[x][0]
@@ -63,9 +63,9 @@ def findRoutesTwo(start, currentRoute, options, visited, visitedSmall):
             paths.append(findRoutesTwo(x, [*currentRoute, x], options, {**visited, x: True}, visitedSmall or(x in visited and x.islower() and x != 'start' and x!= 'end')))
     return flatten(paths)
 
-def partTwo():
+def part_two():
     options = {}
-    lines = getLinesSplitOnChar('12_input.txt', '-')
+    lines = get_line_split_on_char('12_input.txt', '-')
 
     for x in range(0, len(lines)):
         start = lines[x][0]
@@ -82,5 +82,5 @@ def partTwo():
     allPaths = combineToPaths(paths)
     print("Part Two:", len(allPaths))
 
-partOne()
-partTwo()
+part_one()
+part_two()

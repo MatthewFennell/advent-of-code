@@ -1,4 +1,4 @@
-from common import getLinesAsArray
+from common import get_lines_as_array
 
 myUpdates = []
 
@@ -73,7 +73,7 @@ def updateFlashes(row, col, lines, updates):
     return lines, updates
             
 
-def partOne():
+def part_one():
     # lines =[[5,4,8,3,1,4,3,2,2,3],
     #         [2,7,4,5,8,5,4,7,1,1],
     #         [5,2,6,4,5,5,6,1,7,3],
@@ -91,7 +91,7 @@ def partOne():
     #         [1,9,9,9,1],
     #         [1,1,1,1,1]]
 
-    lines = getLinesAsArray('11_input.txt')
+    lines = get_lines_as_array('11_input.txt')
     
     numberOfPhases = 10000
     numberOfFlashes = 0
@@ -119,5 +119,5 @@ def partOne():
     # for x in lines:
     #     print(x)
 
-a = partOne()
+a = part_one()
 print("Part Two:", (a+1))

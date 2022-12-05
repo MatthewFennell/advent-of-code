@@ -1,5 +1,5 @@
 import math
-from common import getLinesAsArray
+from common import get_lines_as_array
 
 def follow(row, col, s, data):
     for y, x in [(-1, 0), (1, 0), (0, 1), (0, -1)]:
@@ -30,7 +30,7 @@ def isLowPoint(row, col, grid):
     return True
 
 
-def partTwo():
+def part_two():
     data = open("9_input.txt").read().strip().split("\n")
     lows = []
     basins = []
@@ -46,8 +46,8 @@ def partTwo():
     print(f"Part 2: {math.prod(sorted(list(basins), reverse=True)[:3])}")
 
 
-def partOne():
-    lines = getLinesAsArray('9_input.txt')
+def part_one():
+    lines = get_lines_as_array('9_input.txt')
 
     # lines = [[2,1,9,9,9,4,3,2,1,0],
     #         [3,9,8,7,8,9,4,9,2,1],
@@ -73,5 +73,5 @@ def partOne():
 
     
 
-partOne()
-partTwo()
+part_one()
+part_two()

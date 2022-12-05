@@ -1,7 +1,7 @@
-from common import getLinesSplitOnChar
+from common import get_line_split_on_char
 
-def partOne():
-    lines = getLinesSplitOnChar('14_input.txt', ' -> ')
+def part_one():
+    lines = get_line_split_on_char('14_input.txt', ' -> ')
     mappings = {}
     startString = 'CFFPOHBCVVNPHCNBKVNV'
     numberOfRounds = 40
@@ -36,9 +36,9 @@ def partOne():
             minOccurence = elements[key]
     print("Part One:", maxNumber - minOccurence)
 
-def partTwo():
+def part_two():
     startString = 'CFFPOHBCVVNPHCNBKVNV'
-    lines = getLinesSplitOnChar('14_input.txt', ' -> ')
+    lines = get_line_split_on_char('14_input.txt', ' -> ')
     pairCounts = {}
     numberOfRounds = 40
     mappings = {}
@@ -93,5 +93,5 @@ def partTwo():
         if letterCounts[x] < minVal:
              minVal = letterCounts[x]
     print("Part Two:", maxVal - minVal)
-# partOne()
-partTwo()
+# part_one()
+part_two()

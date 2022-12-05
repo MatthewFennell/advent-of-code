@@ -1,7 +1,7 @@
-from common import getLinesAsNumbers
+from common import get_lines_as_numbers
 
 def part_one():
-    lines = getLinesAsNumbers('1_input.txt')
+    lines = get_lines_as_numbers('1_input.txt')
     current_max = 0
     current_sum = 0
     for num in lines:
@@ -14,7 +14,7 @@ def part_one():
     print('Part One:', current_max)
 
 def part_two():
-    lines = getLinesAsNumbers('1_input.txt')
+    lines = get_lines_as_numbers('1_input.txt')
 
     current_max = 0
     current_second = 0

@@ -1,4 +1,4 @@
-from common import getLinesAsArray
+from common import get_lines_as_array
 import math
 
 def makeBiggerMap(myMap):
@@ -21,8 +21,8 @@ def makeBiggerMap(myMap):
                 newVal = newVal % 10 + 1
             newMap[row][col] = newVal
     return newMap
-def partOne():
-    lines = getLinesAsArray('15_input.txt')
+def part_one():
+    lines = get_lines_as_array('15_input.txt')
     lines = makeBiggerMap(lines)
     lines[0][0] = 0
     costs = []
@@ -71,4 +71,4 @@ def partOne():
 
 
 
-partOne()
+part_one()

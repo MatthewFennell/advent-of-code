@@ -1,4 +1,4 @@
-from common import getLinesAsArray
+from common import get_lines_as_array
 
 def convert(list):
       
@@ -10,8 +10,8 @@ def convert(list):
       
     return(res)
 
-def partOne():
-    lines = getLinesAsArray('3_input.txt')
+def part_one():
+    lines = get_lines_as_array('3_input.txt')
     
     objOnes = {}
     objZeros = {}
@@ -78,8 +78,8 @@ def recurseDown(lines, index, isTakingMax):
     
   
 
-def partTwo():
-    lines = getLinesAsArray('3_input.txt')
+def part_two():
+    lines = get_lines_as_array('3_input.txt')
 #     lines=[  [0,0,1,0,0],
 # [1,1,1,1,0],
 # [1,0,1,1,0],
@@ -103,5 +103,5 @@ def partTwo():
     print ("Part Two: " + str(oxygenDec * coDec))
 
 
-partOne() # 3901196
-partTwo() # 4412188
+part_one() # 3901196
+part_two() # 4412188

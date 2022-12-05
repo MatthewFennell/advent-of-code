@@ -1,4 +1,4 @@
-from common import getLineAsNumbers
+from common import get_line_as_numbers
 
 def numberOfFish(fish, daysRemaining, obj):
     if (daysRemaining == 0):
@@ -30,8 +30,8 @@ obj_128 = {
     8: numberOfFish([8], 128, {}),
 }
 
-def partOne():
-    lines = getLineAsNumbers('6_input.txt')
+def part_one():
+    lines = get_line_as_numbers('6_input.txt')
     numberOfDays = 80
     myObj = {
         1: numberOfFish([1], numberOfDays, {}),
@@ -47,8 +47,8 @@ def partOne():
         totalNumberOfFish += myObj[x]
     print("Part One", totalNumberOfFish)
 
-def partTwo():
-    lines = getLineAsNumbers('6_input.txt')
+def part_two():
+    lines = get_line_as_numbers('6_input.txt')
 
     numberOfDays = 256
     six= numberOfFish([6], 256, obj_128)
@@ -72,5 +72,5 @@ def partTwo():
         totalNumberOfFish += myObj[x]
     print("Part Two:", totalNumberOfFish)
 
-partOne()
-partTwo()
+part_one()
+part_two()

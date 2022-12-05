@@ -1,7 +1,7 @@
-from common import getLineAsNumbers
+from common import get_line_as_numbers
 
-def partOne():
-    lines = getLineAsNumbers('7_input.txt')
+def part_one():
+    lines = get_line_as_numbers('7_input.txt')
     # lines=[16,1,2,0,4,2,7,1,2,14]
     
     numberAtEachPosition = {}
@@ -32,8 +32,8 @@ def partOne():
     print("Part One:", minCost)
 
 
-def partTwo():
-    lines = getLineAsNumbers('7_input.txt')
+def part_two():
+    lines = get_line_as_numbers('7_input.txt')
     # lines=[16,1,2,0,4,2,7,1,2,14]
     
     numberAtEachPosition = {}
@@ -71,5 +71,5 @@ def partTwo():
     print("Part Two:", minCost)
         
 
-partOne()
-partTwo()
+part_one()
+part_two()

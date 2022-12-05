@@ -1,20 +1,20 @@
 import re
 
-def getLinesAsNumbers(filename):
+def get_lines_as_numbers(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
             lines.append(int(line))
     return lines
 
-def getLines(filename):
+def get_lines(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
             lines.append(line)
     return lines
 
-def getLinesAsArray(filename):
+def get_lines_as_array(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -22,7 +22,7 @@ def getLinesAsArray(filename):
             lines.append(numList)
     return lines
 
-def getLineAsNumbers(filename):
+def get_line_as_numbers(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -31,7 +31,7 @@ def getLineAsNumbers(filename):
                 lines.append(int(y))         
     return lines
 
-def getLinesAsNumberArrays(filename):
+def get_lines_as_number_arrays(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -42,7 +42,7 @@ def getLinesAsNumberArrays(filename):
             lines.append(myLine)      
     return lines
 
-def getBingoBoards(filename):
+def get_bingo_boards(filename):
     lines = []
     currentBoard = []
     with open(filename) as file:
@@ -55,7 +55,7 @@ def getBingoBoards(filename):
         lines.append(currentBoard)
     return lines
 
-def getLineSplitOnManyChars(filename, charsToSplitOn):
+def get_line_split_on_many_chars(filename, charsToSplitOn):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -64,7 +64,7 @@ def getLineSplitOnManyChars(filename, charsToSplitOn):
     return lines
 
 
-def getLinesSplitOnChar(filename, charSplit):
+def get_line_split_on_char(filename, charSplit):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -72,14 +72,14 @@ def getLinesSplitOnChar(filename, charSplit):
             lines.append(res)   
     return lines
 
-def getLinesAsArrayWithSplit(filename):
+def get_lines_as_array_with_split(filename):
     lines = []
     with open(filename) as file:
         while (line := file.readline().rstrip()):
             res = line.split(' | ')
-            partOne = res[0].split(" ")
-            partTwo = res[1].split(" ")
-            lines.append([partOne, partTwo])
+            part_one = res[0].split(" ")
+            part_two = res[1].split(" ")
+            lines.append([part_one, part_two])
             
     return lines
     

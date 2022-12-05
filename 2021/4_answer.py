@@ -1,10 +1,10 @@
-from common import getLineAsNumbers, getBingoBoards
+from common import get_line_as_numbers, get_bingo_boards
 
-def partOne(): 
-    lines = getLineAsNumbers('4_numbers.txt')
+def part_one(): 
+    lines = get_line_as_numbers('4_numbers.txt')
     # print(lines)
 
-    bingoBoards = getBingoBoards('4_input.txt')
+    bingoBoards = get_bingo_boards('4_input.txt')
     # print(bingoBoards)
 
     myDict = {}
@@ -44,11 +44,11 @@ def partOne():
                         sum += x
                 return sum * bingoNumber
                 
-def partTwo(): 
-    lines = getLineAsNumbers('4_numbers.txt')
+def part_two(): 
+    lines = get_line_as_numbers('4_numbers.txt')
     # print(lines)
 
-    bingoBoards = getBingoBoards('4_input.txt')
+    bingoBoards = get_bingo_boards('4_input.txt')
     # print(bingoBoards)
 
     myDict = {}
@@ -95,5 +95,5 @@ def partTwo():
                 
 
 
-print("Part one:", partOne())
-print("Part two:", partTwo())
+print("Part one:", part_one())
+print("Part two:", part_two())

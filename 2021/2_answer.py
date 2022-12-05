@@ -1,9 +1,9 @@
-from common import getLines
+from common import get_lines
 
-def partOne():
+def part_one():
     horizontal = 0
     depth = 0
-    lines = getLines('2_input.txt')
+    lines = get_lines('2_input.txt')
     # lines = ['forward 5', 'down 5', 'forward 8', 'up 3', 'down 8', 'forward 2']
     for i in range(0, len(lines)):
         row = lines[i].split()
@@ -20,11 +20,11 @@ def partOne():
     print ("Part One: " + str(horizontal*depth))
     print("")
 
-def partTwo():
+def part_two():
     horizontal = 0
     depth = 0
     aim = 0
-    lines = getLines('2_input.txt')
+    lines = get_lines('2_input.txt')
     # lines = ['forward 5', 'down 5', 'forward 8', 'up 3', 'down 8', 'forward 2']
     for i in range(0, len(lines)):
         row = lines[i].split()
@@ -42,5 +42,5 @@ def partTwo():
     print ("Part Two: " + str(horizontal*depth)) 
 
 
-partOne() # 1728414
-partTwo() # 1765720035
+part_one() # 1728414
+part_two() # 1765720035

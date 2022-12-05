@@ -1,4 +1,4 @@
-from common import getLines
+from common import get_lines
 
 default_points = {
     'X':1,
@@ -62,7 +62,7 @@ def figure_out(enemy_choice, desired_result):
 
 
 def part_one():
-    lines = getLines('2_input.txt')
+    lines = get_lines('2_input.txt')
     score = 0
     for round in lines:
         split = round.split(' ')
@@ -70,7 +70,7 @@ def part_one():
     print("Part One:", score)
 
 def part_two():
-    lines = getLines('2_input.txt')
+    lines = get_lines('2_input.txt')
     score = 0
     for round in lines:
         split = round.split(' ')
