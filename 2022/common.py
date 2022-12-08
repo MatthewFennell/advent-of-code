@@ -32,3 +32,25 @@ def get_line_split_on_char(filename, charSplit):
             res = line.split(charSplit) 
             lines.append(res)   
     return lines
+
+def get_number_list(filename):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            myLine = []
+            x = list(line)
+            for y in x:
+                myLine.append(int(y))   
+            lines.append(myLine)      
+    return lines
+
+def get_lines_as_number_arrays(filename):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            myLine = []
+            x = line.split('')
+            for y in x:
+                myLine.append(int(y))   
+            lines.append(myLine)      
+    return lines
