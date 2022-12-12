@@ -15,7 +15,7 @@ def get_lines(filename):
 
 def get_lines_with_empty_lines(filename):
     with open(filename, "r") as file:
-        return [line for line in file if line.strip()]
+        return [line.rstrip() for line in file if line.strip()]
 
 def get_lines_as_array(filename):
     lines = []
