@@ -137,6 +137,6 @@ def part_two():
                     
 
 
-# part_one()
+part_one()
 part_two()
 
