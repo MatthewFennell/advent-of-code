@@ -1,0 +1,39 @@
+The numbers should be moved in the order they originally appear in the encrypted file. Numbers moving around during the mixing process do not change the order in which the numbers are moved.
+
+Consider this encrypted file:
+
+1
+2
+-3
+3
+-2
+0
+4
+Mixing this file proceeds as follows:
+
+Initial arrangement:
+1, 2, -3, 3, -2, 0, 4
+
+1 moves between 2 and -3:
+2, 1, -3, 3, -2, 0, 4
+
+2 moves between -3 and 3:
+1, -3, 2, 3, -2, 0, 4
+
+-3 moves between -2 and 0:
+1, 2, 3, -2, -3, 0, 4
+
+3 moves between 0 and 4:
+1, 2, -2, -3, 0, 3, 4
+
+-2 moves between 4 and 1:
+1, 2, -3, 0, 3, 4, -2
+
+0 does not move:
+1, 2, -3, 0, 3, 4, -2
+
+4 moves between -3 and 0:
+1, 2, -3, 4, 0, 3, -2
+Then, the grove coordinates can be found by looking at the 1000th, 2000th, and 3000th numbers after the value 0, wrapping around the list as necessary. In the above example, the 1000th number after 0 is 4, the 2000th is -3, and the 3000th is 2; adding these together produces 3.
+
+Mix your encrypted file exactly once. What is the sum of the three numbers that form the grove coordinates?

@@ -1,5 +1,18 @@
 from common import get_lines
 
+def generate_all_permutations(permutations, valves, current_valve, minutes_remaining, pressure_relieved):
+    if minutes_remaining <= 0:
+        return permutations
+
+    current_valve_open = valves[current_valve]['is_valve_open']
+    available_tunnels = valves[current_valve]['tunnels']
+    print("available", available_tunnels)
+
+
+
+    
+
+
 def part_one():
     lines = get_lines('16_input.txt')
     valves = {}
@@ -13,13 +26,38 @@ def part_one():
             "flow_rate": flow_rate,
             "origin": origin,
             "tunnels": tunnels,
-            "values": {}
+            "values": {},
+            "is_valve_open": False
         }
 
-    for valve in valves:
-        pass
+    permutations = {}
+
+    generate_all_permutations(permutations, valves, 'AA', 15, 0)
 
     
+
+def add_stuff(c, my_list):
+    new_arr = []
+    if len(my_list) == 0:
+        return c
+    for x in my_list:
+        if x % 2 == 0:
+            c = {
+                **c,
+                [x]: True
+            }
+        else:
+            new_arr.append(x+7)
+    return add_stuff(c, new_arr)
+    
+
+
+
+a = [1,2,3,4]
+    
+d = {}
+obj = add_stuff(d, a)
+print(obj)
 
 
     

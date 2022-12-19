@@ -54,3 +54,14 @@ def get_lines_as_number_arrays(filename):
                 myLine.append(int(y))   
             lines.append(myLine)      
     return lines
+
+def get_lines_as_numbers(filename):
+    lines = []
+    with open(filename) as file:
+        while (line := file.readline().rstrip()):
+            myLine = []
+            x = line.split(',')
+            for y in x:
+                myLine.append(int(y))   
+            lines.append(myLine)      
+    return lines
